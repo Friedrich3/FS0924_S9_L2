@@ -14,6 +14,11 @@ class AllTheBooks extends Component {
     activeCategory: fantasy,
   };
   
+  changeState = function(parameter){
+    this.setState({
+      activeCategory: parameter
+    })
+  }
  
   
 
@@ -28,7 +33,8 @@ class AllTheBooks extends Component {
               horizontal
               className=" justify-content-center text-center"
             >
-              <Button className="mx-1 btn-secondary" onClick={()=> this.setState({activeCategory:fantasy})}>Fantasy</Button>
+              {/* <Button className="mx-1 btn-secondary" onClick={()=> this.setState({activeCategory:fantasy})}>Fantasy</Button>  SOTTO MESSO CON UNA FUNZIONE ESTERNA MA PREFERIBILMENTE SI USA LA FUNZIONE FRECCIA  */}  
+              <Button className="mx-1 btn-secondary" onClick={()=> this.changeState(fantasy)}>Fantasy</Button> 
               <Button className="mx-1 btn-secondary" onClick={()=> this.setState({activeCategory:history})}>History</Button>
               <Button className="mx-1 btn-secondary" onClick={()=> this.setState({activeCategory:horror})}>Horror</Button>
               <Button className="mx-1 btn-secondary" onClick={()=> this.setState({activeCategory:romance})}>Romance</Button>
