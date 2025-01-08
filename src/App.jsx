@@ -2,7 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MyNav from './components/MyNav'
 import MyFooter from './components/MyFooter'
 import WelcomeAlert from './components/WelcomeAlert'
-import AllTheBooks from "./components/AllTheBooks";
+//import AllTheBooks from "./components/AllTheBooks";
+import AllTheBooksClass from "./components/AllTheBooksClass";
 
 function App() {
  
@@ -10,7 +11,7 @@ function App() {
     <>
       <MyNav />
       <WelcomeAlert />
-      <AllTheBooks />
+      <AllTheBooksClass />
       <MyFooter />
     </>
   )
