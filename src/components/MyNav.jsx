@@ -2,6 +2,7 @@ import { Navbar, Container, Nav, } from "react-bootstrap";
 
 const MyNav = function () {
   return (
+    <header>
     <Navbar expand="md" bg="dark" data-bs-theme="dark">
       <Container fluid className=" mx-5">
         <Navbar.Brand href="#home">EpiBooks</Navbar.Brand>
@@ -15,6 +16,7 @@ const MyNav = function () {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </header>
   );
 };
 
