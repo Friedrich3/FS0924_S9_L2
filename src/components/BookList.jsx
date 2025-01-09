@@ -10,6 +10,9 @@ const BookList = function(props){
         
         <Container>
             <Row className="row-cols-3 row-cols-md-4 row-cols-lg-5 gy-4">
+            {
+                console.log(props)
+            }
               {props.listaLibri.map((book) => {
                 return (
                   <SingleBook key={book.asin} singleBook={book} />

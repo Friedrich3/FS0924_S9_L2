@@ -26,18 +26,13 @@ class AllTheBooksClass extends Component {
 
   checkResearch = function () {
     if (this.state.searchInput.research === "") {
-      return;
+      return this.state.activeCategory.categoria;
     } else {
       const arrayfiltrato = this.state.activeCategory.categoria.filter(
         (libro) =>
           libro.title.toLowerCase().includes(this.state.searchInput.research)
       );
-      // this.setState({
-      //   activeCategory: {
-      //     categoria: arrayfiltrato,
-      //   },
-      // });
-      console.log(arrayfiltrato)
+      return arrayfiltrato;
     }
   };
 
@@ -129,8 +124,8 @@ class AllTheBooksClass extends Component {
             </Container>
             {/* se il formValue e' vuoto fai listaLibri deve essere la active category altrimenti deve essere il risultato del filtro di active category */}
           </div>
-          {this.checkResearch()}
-          <BookList listaLibri={this.state.activeCategory.categoria} />
+          {/* {this.checkResearch()} FIXED POST DEBRIEF*/}
+          <BookList listaLibri={this.checkResearch()} />
         </main>
       </>
     );
