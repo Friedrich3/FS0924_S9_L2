@@ -52,6 +52,7 @@ class AllTheBooksClass extends Component {
                 onClick={() =>
                   this.setState({
                     activeCategory: { categoria: fantasy },
+                    searchInput: { research: "" },
                   })
                 }
               >
@@ -64,6 +65,7 @@ class AllTheBooksClass extends Component {
                     activeCategory: {
                       categoria: history,
                     },
+                    searchInput: { research: "" },
                   })
                 }
               >
@@ -76,6 +78,7 @@ class AllTheBooksClass extends Component {
                     activeCategory: {
                       categoria: horror,
                     },
+                    searchInput: { research: "" },
                   })
                 }
               >
@@ -88,6 +91,7 @@ class AllTheBooksClass extends Component {
                     activeCategory: {
                       categoria: romance,
                     },
+                    searchInput: { research: "" },
                   })
                 }
               >
@@ -100,6 +104,7 @@ class AllTheBooksClass extends Component {
                     activeCategory: {
                       categoria: scifi,
                     },
+                    searchInput: { research: "" },
                   })
                 }
               >
@@ -124,7 +129,7 @@ class AllTheBooksClass extends Component {
             </Container>
             {/* se il formValue e' vuoto fai listaLibri deve essere la active category altrimenti deve essere il risultato del filtro di active category */}
           </div>
-          {/* {this.checkResearch()} FIXED POST DEBRIEF*/}
+          {/* {this.checkResearch()} NON BISOGNA INVOCARE UNA FUNZIONE ALL'INTERNO DI RENDER CHE VA A MODIFICARELO STATO POICHE IL CAMBIO DI STATO RICHIAMA A RENDER        FIXED POST DEBRIEF*/}
           <BookList listaLibri={this.checkResearch()} />
         </main>
       </>
