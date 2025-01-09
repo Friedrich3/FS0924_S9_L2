@@ -52,7 +52,7 @@ class AllTheBooksClass extends Component {
                 onClick={() =>
                   this.setState({
                     activeCategory: { categoria: fantasy },
-                    searchInput: { research: "" },
+                    searchInput: { research: ""},
                   })
                 }
               >
