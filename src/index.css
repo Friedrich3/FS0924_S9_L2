@@ -4,3 +4,9 @@
     box-sizing: border-box;
     height: 100vh;
 }
+
+
+.selezionata{
+    border: 1px solid green !important;
+    box-shadow: 2px 2px 2px #7c7c7c;
+} 

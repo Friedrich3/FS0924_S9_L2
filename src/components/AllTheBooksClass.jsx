@@ -1,4 +1,4 @@
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, } from "react-bootstrap";
 import fantasy from "../data/fantasy.json";
 import history from "../data/history.json";
 import horror from "../data/horror.json";
@@ -6,9 +6,10 @@ import romance from "../data/romance.json";
 import scifi from "../data/scifi.json";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Component } from "react";
-import SingleBook from "./SingleBook";
+import BookList from "./BookList";
 
-class AllTheBooks extends Component {
+
+class AllTheBooksClass extends Component {
 
   state = {
     activeCategory: fantasy,
@@ -41,15 +42,7 @@ class AllTheBooks extends Component {
               <Button className="mx-1 btn-secondary" onClick={()=> this.setState({activeCategory:scifi})}>Scifi</Button>
             </ListGroup>
           </div>
-          <Container>
-            <Row className="row-cols-3 row-cols-md-4 row-cols-lg-5 gy-4">
-              {this.state.activeCategory.map((book) => {
-                return (
-                  <SingleBook key={book.asin} singleBook={book} />
-                );
-              })}
-            </Row>
-          </Container>
+              <BookList listaLibri={this.state.activeCategory}/>
         </main>
       </>
     );
@@ -57,4 +50,4 @@ class AllTheBooks extends Component {
 }
 
 
-export default AllTheBooks;
+export default AllTheBooksClass;
